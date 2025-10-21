@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% load static  %}
+{% block title %}
+ScanQr
+{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'scanner/css/scanner.css' %}">
+{% endblock  %}
+
+{% block content %}
+<div class="form-container">
+    <h2>Scan Qr Code</h2>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="form-group">
+            {{form.phone_number.label_tag}}
+            {{form.phone_number}}
+            {% for error in form.phone_number.errors %}
+            <small class="error">{{error}}</small>
+            {% endfor %}
+        </div>
+        <div class="form-group">
+            {{ form.image.label_tag }}
+            {{ form.image }}
+            {% for error in form.image.errors %}
+                <small class="error">{{error}}</small>
+            {% endfor %}
+            <button type="submit" class="btn">Scan</button>
+        </div>
+    </form>
+    <h2>{{result}}</h2>
+
+</div>
+{% endblock %}

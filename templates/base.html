@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title%}QR Scanner {% endblock%}</title>
+    <link rel="stylesheet" href="{% static 'css/nav.css' %}">
+    {% block extra_css %}{% endblock %}
+</head>
+<body>
+    <header>
+        {% include 'partials/nav.html' %}
+    </header>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    <footer>
+        <p>© 2025 QR Generator & Scanner | Made with ❤️ by Waleed</p>
+    </footer>
+</body>
+</html>
