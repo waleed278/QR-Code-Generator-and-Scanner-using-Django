@@ -31,7 +31,7 @@ The app uses the **`qrcode`** and **`pyzbar`** libraries for QR processing and i
 | **Backend Framework** | Django |
 | **Language** | Python |
 | **Frontend** | HTML, CSS (Bootstrap) |
-| **QR Libraries** | `qrcode`, `pyzbar`, `Pillow` |
+| **QR Libraries** | `qrcode`, `OpenCV`, `Pillow` |
 | **In-memory File Handling** | `io.BytesIO` |
 
 ---
