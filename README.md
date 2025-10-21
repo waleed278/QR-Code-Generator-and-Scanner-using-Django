@@ -34,7 +34,7 @@ The app uses the **`qrcode`** and **`pyzbar`** libraries for QR processing and i
 | **QR Libraries** | `qrcode`, `OpenCV`, `Pillow` |
 | **In-memory File Handling** | `io.BytesIO` |
 
----
+
 
 
 
